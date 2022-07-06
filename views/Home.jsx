@@ -1,6 +1,5 @@
 const React = require('react');
 const Layout = require('./Layout');
-// const EntryHome = require('./Entry-home');
 
 module.exports = function Home({ title, user }) {
   return (
