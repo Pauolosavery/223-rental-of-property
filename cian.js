@@ -8,7 +8,7 @@ const config = require('./middleware/config');
 
 config(app);
 
-// const homeRouter = require('./routes/home.routes');
+const homeRouter = require('./routes/homeRouter');
 // const userRouter = require('./routes/user.routes');
 // const tagRouter = require('./routes/tags.routes');
 // const entriesRouter = require('./routes/entries.routes');
@@ -16,7 +16,7 @@ config(app);
 
 const PORT = process.env.PORT ?? 3000;
 
-// app.use('/', homeRouter);
+app.use('/', homeRouter);
 // app.use('/user', userRouter);
 // app.use('/tags', tagRouter);
 // app.use('/entries', entriesRouter);
