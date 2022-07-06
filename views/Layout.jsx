@@ -8,6 +8,7 @@ module.exports = function Layout({ title, children, user }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <script defer src="/js/client.js" />
         {/* <!-- Bootstrap CSS --> */}
         <link
@@ -37,7 +38,6 @@ module.exports = function Layout({ title, children, user }) {
           crossOrigin="anonymous"
         />
         {/* <!-- User Scripts --> */}
-
         <title>{title}</title>
       </head>
       <header>
@@ -62,10 +62,10 @@ module.exports = function Layout({ title, children, user }) {
                     <ul className="navbar-nav ml-auto">
 
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id">{`Привет, ${user.fullname}! (продавец)`}</a>
+                        <a className="nav-link mr-4">{`Привет, ${user.login}! (администратор)`}</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id/goods">Личный кабинет</a>
+                        <a className="nav-link mr-4" href="/user/admin">Личный кабинет</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link mr-4" href={`/user/${user.id}/goods/edit`}>Добавить товар</a>
@@ -82,10 +82,10 @@ module.exports = function Layout({ title, children, user }) {
                     <ul className="navbar-nav ml-auto">
 
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id">{`Привет, ${user.fullname}! (арендатор)`}</a>
+                        <a className="nav-link mr-4">{`Привет, ${user.login}! (арендатор)`}</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id/goods">Избранное</a>
+                        <a className="nav-link mr-4" href="/user/favorite">Избранное</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/auth/logout">Выйти</a>
@@ -102,9 +102,8 @@ module.exports = function Layout({ title, children, user }) {
                       <a className="nav-link mr-4" href="/auth/login">Войти</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link mr-4" href="/auth/registr">Зарегистрироваться</a>
+                      <a className="nav-link mr-4" href="/auth/reg">Зарегистрироваться</a>
                     </li>
-
                   </ul>
                 </div>
               );
@@ -115,6 +114,12 @@ module.exports = function Layout({ title, children, user }) {
       <body>
         {children}
       </body>
+      <footer className="footer">
+        <div>
+          <h5>Кирочная 19, г.Санкт-Петербург, офис 323</h5>
+          <h5>admin@admin</h5>
+        </div>
+      </footer>
     </html>
   );
 };
