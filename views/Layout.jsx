@@ -62,10 +62,10 @@ module.exports = function Layout({ title, children, user }) {
                     <ul className="navbar-nav ml-auto">
 
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id">{`Привет, ${user.login}! (администратор)`}</a>
+                        <a className="nav-link mr-4">{`Привет, ${user.login}! (администратор)`}</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id/goods">Личный кабинет</a>
+                        <a className="nav-link mr-4" href="/user/admin">Личный кабинет</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link mr-4" href={`/user/${user.id}/goods/edit`}>Добавить товар</a>
@@ -82,10 +82,10 @@ module.exports = function Layout({ title, children, user }) {
                     <ul className="navbar-nav ml-auto">
 
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id">{`Привет, ${user.login}! (арендатор)`}</a>
+                        <a className="nav-link mr-4">{`Привет, ${user.login}! (арендатор)`}</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/:id/goods">Избранное</a>
+                        <a className="nav-link mr-4" href="/user/favorite">Избранное</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/auth/logout">Выйти</a>
