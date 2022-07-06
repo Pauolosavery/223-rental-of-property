@@ -11,8 +11,6 @@ module.exports = function Home({ title, user }) {
         <div className="divHomeImg">
           YANDEX MAPS
         </div>
-        {/* <div className="editCardDiv" /> */}
-        {/* {posts.map((obj) => <EntryHome key={obj.id} obj={obj} />)} */}
       </div>
     </Layout>
   );
