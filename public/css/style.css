@@ -1,0 +1,15 @@
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+}
+
+.divHomeImg {
+  margin: 10%;
+  width: 80%;
+  height: 500px;
+  border: 2px solid #ccc;
+  background-image: url(https://picsum.photos/1080/200);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
