@@ -5,8 +5,8 @@
   "main": "cian.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cian.js",
-    "dev": "npx nodemon cian.js -e js,jsx,css"
+    "start": "pik.js",
+    "dev": "npx nodemon pik.js -e js,jsx,css"
   },
   "repository": {
     "type": "git",
