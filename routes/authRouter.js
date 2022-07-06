@@ -1,7 +1,9 @@
 const authRouter = require('express').Router();
 const bcrypt = require('bcrypt');
 const Login = require('../views/Login');
+
 const Registr = require('../views/Registr');
+
 
 const { User } = require('../db/models');
 
@@ -13,6 +15,7 @@ authRouter
     const title = 'Логинизация';
     res.renderComponent(Login, { title });
   })
+
   .get('/reg', (req, res) => {
     const title = 'Регистрация';
     res.renderComponent(Registr, { title });
@@ -21,6 +24,12 @@ authRouter
     try {
       const {
         login, email,
+
+  .post('/reg', async (req, res) => {
+    try {
+      const {
+        login, password, email, admin,
+
       } = req.body;
       const user = await User.findOne({
         where: {
@@ -31,6 +40,7 @@ authRouter
         res.json({ status: 'notok', errorMessage: 'Пользователь уже зарегистрирован' });
         return;
       }
+
       const hash = await bcrypt.hash(req.body.password, 10);
       let admin = false;
       if (req.body.checkbox) {
@@ -43,6 +53,17 @@ authRouter
         admin,
       });
       res.redirect('/auth/login');
+
+
+      const hash = await bcrypt.hash(req.body.password, 10);
+      await User.create({
+        login,
+        password: hash,
+        email,
+        admin,
+      });
+      res.json({ status: 'ok' });
+
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
     }
@@ -65,14 +86,22 @@ authRouter
         return;
       }
       req.session.user = user;
+
       res.redirect('/');
+
+      res.json({ status: 'ok' });
+
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
     }
   })
   .get('/logout', async (req, res) => {
     req.session.destroy();
+
     res.clearCookie('coockie_user_pik');
+
+    res.clearCookie('user_sid');
+
     res.redirect('/');
   });
 
