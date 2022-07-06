@@ -7,7 +7,7 @@ const path = require('path');
 const render = require('./reactSsr');
 // const staticMiddleware = require('./fsSendFile');
 
-const publicPath = path.join(__dirname, '../public/');
+const publicPath = path.join(__dirname, '../public');
 
 const sessionConfig = {
   // сессии будут храниться в файлах
