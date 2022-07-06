@@ -2,7 +2,7 @@
   "name": "223-rental-of-property",
   "version": "1.0.0",
   "description": "## Звонок от заказчика <details> <summary>Транскрипция звонка</summary> <p> Привет, с вами Анатолий! У меня есть офис по аренде жилья и для увеличения поиска клиентов нужно создать отличный сайт. Мне сказали, что вы отличные специалисты и вам не составит труда создать  для нас сервис по поиску жилья.",
-  "main": "cian.js",
+  "main": "pik.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pik.js",
@@ -26,10 +26,10 @@
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "morgan": "^1.10.0",
     "@babel/core": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
