@@ -1,6 +1,7 @@
 const authRouter = require('express').Router();
 const bcrypt = require('bcrypt');
 const Login = require('../views/Login');
+const Registr = require('../views/Registr');
 
 const { User } = require('../db/models');
 
@@ -12,10 +13,14 @@ authRouter
     const title = 'Логинизация';
     res.renderComponent(Login, { title });
   })
+  .get('/reg', (req, res) => {
+    const title = 'Регистрация';
+    res.renderComponent(Registr, { title });
+  })
   .post('/reg', async (req, res) => {
     try {
       const {
-        login, password, email, admin,
+        login, email,
       } = req.body;
       const user = await User.findOne({
         where: {
@@ -26,15 +31,18 @@ authRouter
         res.json({ status: 'notok', errorMessage: 'Пользователь уже зарегистрирован' });
         return;
       }
-
       const hash = await bcrypt.hash(req.body.password, 10);
+      let admin = false;
+      if (req.body.checkbox) {
+        admin = true;
+      }
       await User.create({
         login,
-        password: hash,
         email,
+        password: hash,
         admin,
       });
-      res.json({ status: 'ok' });
+      res.redirect('/auth/login');
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
     }
@@ -57,14 +65,14 @@ authRouter
         return;
       }
       req.session.user = user;
-      res.json({ status: 'ok' });
+      res.redirect('/');
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
     }
   })
   .get('/logout', async (req, res) => {
     req.session.destroy();
-    res.clearCookie('user_sid');
+    res.clearCookie('coockie_user_pik');
     res.redirect('/');
   });
 

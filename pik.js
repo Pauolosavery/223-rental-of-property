@@ -9,6 +9,7 @@ const config = require('./middleware/config');
 config(app);
 
 const homeRouter = require('./routes/home.routes');
+
 // const userRouter = require('./routes/user.routes');
 // const tagRouter = require('./routes/tags.routes');
 // const entriesRouter = require('./routes/entries.routes');
