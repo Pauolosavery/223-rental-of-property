@@ -1,5 +1,13 @@
 const userRouter = require('express').Router();
 
-module.exports = userRouter.get('/', (req, res) => {
+userRouter.get('/', (req, res) => {
   res.send('Страница юзер');
-});
+})
+  .get('/favorite', (req, res) => {
+    res.send('Страница с любимыми ссылками юзера');
+  })
+  .get('/admin', (req, res) => {
+    res.send('Странница Админа');
+  });
+
+module.exports = userRouter;
