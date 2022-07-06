@@ -26,10 +26,10 @@
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "morgan": "^1.10.0",
     "@babel/core": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
