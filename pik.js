@@ -32,9 +32,9 @@ app.use('/user', userRouter);
 
 
 // мидл варки с путями для сортировки
-app.use('/room', roomRouter);
-app.use('/flat', flatRouter);
-app.use('/house', houseRouter);
+app.use('/rooms', roomRouter);
+app.use('/flats', flatRouter);
+app.use('/houses', houseRouter);
 
 
 app.use('/auth', authRouter);

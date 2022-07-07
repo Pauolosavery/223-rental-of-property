@@ -1,13 +1,14 @@
 const flatRouter = require('express').Router();
-// const bcrypt = require('bcrypt');
-// const Login = require('../views/Login');
+const Flat = require('../../views/sortViews/Flat');
 
 const { Housing } = require('../../db/models');
 
 flatRouter
   .get('/', async (req, res) => {
-    const housings = await Housing.findAll({ where: { type_id: 2 }, raw: true });
+    const title = 'Квартиры';
+    const housings = await Housing.findAll({ include: { all: true}, where: {type_id: 2 }, raw: true });
 
+    res.renderComponent(Flat, { title, housings });
     console.log(housings);
   });
 

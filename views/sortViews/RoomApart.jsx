@@ -20,14 +20,5 @@ module.exports = function Apart({ apart }) {
         </div>
       </div>
     </div>
-
-  // <div className="card mb-3" >
-  //   <a href={`/housing/${apart.id}`}>{apart.title}</a>
-  //   <p className="postTextClass" name="description">{apart.description}</p>
-  //   <p className="postTextClass" name="location">{apart.location}</p>
-  //   <img className="img-fluid rounded-start" src={`${apart.image}`} alt="Photo" />
-  //   <p className="postTextClass" name="type_id">{apart.type_id}</p>
-  //   <button className="btn btn-primary" href={`/housing/del/${apart.id}`}>Удалить</button>
-  // </div>
   );
 };
