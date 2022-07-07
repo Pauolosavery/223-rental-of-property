@@ -25,10 +25,10 @@ authRouter
       const {
         login, email,
 
-  .post('/reg', async (req, res) => {
-    try {
-      const {
-        login, password, email, admin,
+  // .post('/reg', async (req, res) => {
+  //   try {
+  //     const {
+  //       login, password, email, admin,
 
       } = req.body;
       const user = await User.findOne({
@@ -55,14 +55,14 @@ authRouter
       res.redirect('/auth/login');
 
 
-      const hash = await bcrypt.hash(req.body.password, 10);
-      await User.create({
-        login,
-        password: hash,
-        email,
-        admin,
-      });
-      res.json({ status: 'ok' });
+      // const hash = await bcrypt.hash(req.body.password, 10);
+      // await User.create({
+      //   login,
+      //   password: hash,
+      //   email,
+      //   admin,
+      // });
+      // res.json({ status: 'ok' });
 
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
@@ -89,7 +89,7 @@ authRouter
 
       res.redirect('/');
 
-      res.json({ status: 'ok' });
+      // res.json({ status: 'ok' });
 
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
@@ -100,7 +100,7 @@ authRouter
 
     res.clearCookie('coockie_user_pik');
 
-    res.clearCookie('user_sid');
+    // res.clearCookie('user_sid');
 
     res.redirect('/');
   });
