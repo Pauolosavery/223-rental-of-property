@@ -13,7 +13,7 @@ indexRouter.get('/', async (req, res) => {
   //   admin: true,
   //   // admin: false,
   // };
-  const user = false;
+  // const user = false;
 
   const title = 'Домашняя страница';
   res.renderComponent(Home, { title, user });
