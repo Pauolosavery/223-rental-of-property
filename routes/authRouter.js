@@ -4,7 +4,6 @@ const Login = require('../views/Login');
 
 const Registr = require('../views/Registr');
 
-
 const { User } = require('../db/models');
 
 authRouter
