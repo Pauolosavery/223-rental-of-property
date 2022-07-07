@@ -1,6 +1,7 @@
 const indexRouter = require('express').Router();
 const Home = require('../views/Home');
 // const { Entry, User } = require('../db/models');
+const { Housing } = require('../db/models');
 
 indexRouter.get('/', async (req, res) => {
 
@@ -16,7 +17,9 @@ indexRouter.get('/', async (req, res) => {
   // const user = false;
 
   const title = 'Домашняя страница';
-  res.renderComponent(Home, { title, user });
+  const housings = await Housing.findAll({ include: { all: true }, raw: true });
+
+  res.renderComponent(Home, { title, user, housings });
 });
 
 module.exports = indexRouter;

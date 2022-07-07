@@ -2,8 +2,8 @@ const React = require('react');
 const FavorApart = require('./FavorApart');
 const Layout = require('./Layout');
 
-module.exports = function Favorite({ title, user, housings }) {
-  { console.log('🚀 ~ file: Admin.jsx ~ line 6 ~ Home ~ housings', housings); }
+module.exports = function Favorite({ title, user, favorites }) {
+  { console.log('🚀 ~ file: Admin.jsx ~ line 6 ~ Home ~ housings', favorites); }
   return (
     <Layout title={title} user={user}>
       <div className="homePage">
@@ -11,7 +11,7 @@ module.exports = function Favorite({ title, user, housings }) {
           <h1>{title}</h1>
         </div>
         <div className="editCardDiv" />
-        { housings.map((apart) => <FavorApart key={apart.id} apart={apart} />)}
+        { favorites.map((apart) => <FavorApart key={apart.id} apart={apart} />)}
       </div>
     </Layout>
   );

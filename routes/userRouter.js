@@ -1,7 +1,8 @@
 const userRouter = require('express').Router();
 const Admin = require('../views/Admin');
-const Favorite = require('../views/Favorite');
-const { Housing } = require('../db/models');
+const Fav = require('../views/Favorite');
+const { Housing, Favorite } = require('../db/models');
+
 
 
 userRouter.get('/', (req, res) => {
@@ -9,9 +10,10 @@ userRouter.get('/', (req, res) => {
 })
   .get('/favorite', async (req, res) => {
     const title = 'Избранное';
-    const housings = await Housing.findAll({ include: { all: true }, raw: true });
+    const favorites = await Favorite.findAll({ include: { all: true }, raw: true });
+    console.log(favorites);
 
-    res.renderComponent(Favorite, { title, housings });
+    // res.renderComponent(Fav, { title, favorites });
   })
   .get('/admin', async (req, res) => {
     const title = 'Администратор';

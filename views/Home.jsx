@@ -1,7 +1,8 @@
 const React = require('react');
+
 const Layout = require('./Layout');
 
-module.exports = function Home({ title, user }) {
+module.exports = function Home({ title, user, housings}) {
   return (
     <Layout title={title} user={user}>
       <div className="homePage">
@@ -15,6 +16,7 @@ module.exports = function Home({ title, user }) {
       <script defer src="/maps.js" type="text/javascript" /> */}
       {/* <script defer src="https://api-maps.yandex.ru/2.1/?apikey=33da25b1-2302-4a3b-a310-16a6ea651c14&lang=ru_RU" type="text/javascript" />
       <script defer src="/js/map.js" type="text/javascript" /> */}
+
     </Layout>
   );
 };
