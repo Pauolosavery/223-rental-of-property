@@ -4,6 +4,11 @@ module.exports = function Layout({ title, children, user }) {
   return (
     <html lang="ru">
       <head>
+        <script
+          src="https://api-maps.yandex.ru/2.1/?apikey=33da25b1-2302-4a3b-a310-16a6ea651c14&lang=ru_RU"
+          type="text/javascript"
+        />
+        <script src="/newmap.js" type="text/javascript" />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -113,6 +118,7 @@ module.exports = function Layout({ title, children, user }) {
       </header>
       <body>
         {children}
+        {/* <div id="map" style={{ width: '100%', height: '400px' }} /> */}
       </body>
       <footer className="footer">
         <div>
