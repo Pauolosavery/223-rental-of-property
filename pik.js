@@ -14,7 +14,6 @@ const userRouter = require('./routes/userRouter');
 // const tagRouter = require('./routes/tags.routes');
 // const entriesRouter = require('./routes/entries.routes');
 
-
 // пути к роутерам для сортировки по категориям
 const roomRouter = require('./routes/sortRouters/roomRouter');
 const flatRouter = require('./routes/sortRouters/flatRoute');
@@ -29,7 +28,6 @@ app.use('/', homeRouter);
 app.use('/user', userRouter);
 // app.use('/tags', tagRouter);
 // app.use('/entries', entriesRouter);
-
 
 // мидл варки с путями для сортировки
 app.use('/room', roomRouter);

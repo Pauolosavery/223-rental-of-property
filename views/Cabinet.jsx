@@ -2,8 +2,7 @@ const React = require('react');
 const Apart = require('./Apart');
 const Layout = require('./Layout');
 
-module.exports = function Admin({ title, user, housings }) {
-  { console.log('🚀 ~ file: Admin.jsx ~ line 6 ~ Home ~ housings', housings); }
+module.exports = function Cabinet({ title, user, housings }) {
   return (
     <Layout title={title} user={user}>
       <div className="homePage">
@@ -11,7 +10,15 @@ module.exports = function Admin({ title, user, housings }) {
           <h1>{title}</h1>
         </div>
         <div className="editCardDiv" />
-        {housings.map((apart) => <Apart key={apart.id} apart={apart} />)}
+        {housings.map((apart) => {
+          let admin;
+          if (user.admin) {
+            admin = true;
+          } else {
+            admin = false;
+          }
+          return (<Apart key={apart.id} apart={apart} admin={admin} />);
+        })}
       </div>
     </Layout>
   );
