@@ -14,11 +14,10 @@ const userRouter = require('./routes/userRouter');
 // const tagRouter = require('./routes/tags.routes');
 // const entriesRouter = require('./routes/entries.routes');
 
-
 // пути к роутерам для сортировки по категориям
 const roomRouter = require('./routes/sortRouters/roomRouter');
 const flatRouter = require('./routes/sortRouters/flatRoute');
-const houseRouter = require('./routes/sortRouters/houseRoute');
+const housingRouter = require('./routes/housingRouter');
 
 const authRouter = require('./routes/authRouter');
 
@@ -27,16 +26,12 @@ const PORT = process.env.PORT ?? 3000;
 app.use('/', homeRouter);
 
 app.use('/user', userRouter);
-// app.use('/tags', tagRouter);
-// app.use('/entries', entriesRouter);
-
+app.use('/auth', authRouter);
+app.use('/housing', housingRouter);
 
 // мидл варки с путями для сортировки
+
 app.use('/room', roomRouter);
 app.use('/flat', flatRouter);
-app.use('/house', houseRouter);
-
-
-app.use('/auth', authRouter);
 
 app.listen(PORT, () => console.log(`<===== SERVER START at ${PORT} =====>`));

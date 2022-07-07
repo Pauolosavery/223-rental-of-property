@@ -1,12 +1,16 @@
 const userRouter = require('express').Router();
-const Admin = require('../views/Admin');
-const Favorite = require('../views/Favorite');
+const Cabinet = require('../views/Cabinet');
+// const Favorite = require('../views/Favorite');
 
 userRouter.get('/', (req, res) => {
   res.send('Страница юзер');
 })
   .get('/favorite', (req, res) => {
+    const { user } = req.session;
     const title = 'Избранное';
+
+    // НАПИСАТЬ АЛГОРИТМ - КОТОРЫЙ ОТДАЁТ ПОЛЬЗОВАТЕЛЮ ТОЛЬКО ЕГО ИЗБРАННОЕ
+
     const housings = [{
       title: 'Команта на Васильевском острове',
       price: 12000,
@@ -33,10 +37,14 @@ userRouter.get('/', (req, res) => {
       createdAt: new Date(),
       updatedAt: new Date(),
     }];
-    res.renderComponent(Favorite, { title, housings });
+    res.renderComponent(Cabinet, { title, user, housings });
   })
   .get('/admin', (req, res) => {
+    const { user } = req.session;
     const title = 'Администратор';
+
+    // НАПИСАТЬ АЛГОРИТМ - КОТОРЫЙ ОТДАЁТ АДМИНИСТРАТОРУ ВСЕ ОБЪЕКТЫ НЕДВИЖИМОСТИ
+
     const housings = [{
       title: 'Команта на Васильевском острове',
       price: 12000,
@@ -63,7 +71,7 @@ userRouter.get('/', (req, res) => {
       createdAt: new Date(),
       updatedAt: new Date(),
     }];
-    res.renderComponent(Admin, { title, housings });
+    res.renderComponent(Cabinet, { title, user, housings });
   });
 
 module.exports = userRouter;
