@@ -1,20 +1,22 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Types', [{
-      typeName: 'Комната',
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    },
-    {
-      typeName: 'Квартира',
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    },
-    {
-      typeName: 'Дом',
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }], {});
+    // await queryInterface.bulkInsert('Types', [
+    //   {
+    //   typeName: 'Комната',
+    //   createdAt: new Date(),
+    //   updatedAt: new Date(),
+    // },
+    // {
+    //   typeName: 'Квартира',
+    //   createdAt: new Date(),
+    //   updatedAt: new Date(),
+    // },
+    // {
+    //   typeName: 'Дом',
+    //   createdAt: new Date(),
+    //   updatedAt: new Date(),
+    // }
+  // ], {});
     /**
      * Add seed commands here.
      *

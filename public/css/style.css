@@ -5,11 +5,21 @@
 }
 
 .divHomeImg {
-  margin: 10%;
-  width: 80%;
+  margin-top: 2%;
+  width: 100%;
   height: 500px;
   border: 2px solid #ccc;
   background-image: url(https://picsum.photos/1080/200);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.titleHomeLayout{
+  display:flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.footer {
+  flex: 0 0 auto;
 }

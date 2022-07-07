@@ -12,7 +12,7 @@ const publicPath = path.join(__dirname, '../public');
 const sessionConfig = {
   // сессии будут храниться в файлах
   store: new FileStore(),
-  name: 'user_sid', // Имя куки для хранения id сессии. По умолчанию - connect.sid
+  name: 'coockie_user_pik', // Имя куки для хранения id сессии. По умолчанию - connect.sid
   secret: process.env.SESSION_SECRET ?? 'G(8x>|Ai^"+&', // Секретное слово для шифрования, может быть любым
   resave: false, // Пересохранять ли куку при каждом запросе
   saveUninitialized: false, // Создавать ли сессию без инициализации ключей в req.session
