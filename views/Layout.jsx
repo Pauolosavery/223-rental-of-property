@@ -1,4 +1,5 @@
 const React = require('react');
+const NavMenu = require('./NavMenu');
 
 module.exports = function Layout({ title, children, user }) {
   return (
@@ -43,85 +44,19 @@ module.exports = function Layout({ title, children, user }) {
         {/* <!-- User Scripts --> */}
         <title>{title}</title>
       </head>
-      <header>
-        <div className="navBar">
-          <nav className="navbar navbar-expand-lg navbar-light bg-white">
-            <a className="navbar-brand" href="/">П.И.К. недвижимость</a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" />
-            </button>
-            {(function navbar() {
-              if (user && user.admin) {
-                return (
-                  <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
-
-                      <li className="nav-item">
-                        <a className="nav-link mr-4">{`Привет, ${user.login}! (администратор)`}</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/admin">Личный кабинет</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link mr-4" href="/housing">Добавить ренту</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/auth/logout">Выйти</a>
-                      </li>
-                    </ul>
-                  </div>
-                );
-              } if (user) {
-                return (
-                  <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
-
-                      <li className="nav-item">
-                        <a className="nav-link mr-4">{`Привет, ${user.login}! (арендатор)`}</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link mr-4" href="/user/favorite">Избранное</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/auth/logout">Выйти</a>
-                      </li>
-                    </ul>
-                  </div>
-                );
-              }
-              return (
-                <div className="collapse navbar-collapse" id="navbarNav">
-                  <ul className="navbar-nav ml-auto">
-
-                    <li className="nav-item">
-                      <a className="nav-link mr-4" href="/auth/login">Войти</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link mr-4" href="/auth/reg">Зарегистрироваться</a>
-                    </li>
-                  </ul>
-                </div>
-              );
-            }())}
-          </nav>
-        </div>
-      </header>
+      <NavMenu user={user} />
       <body>
         {children}
         {/* <div id="map" style={{ width: '100%', height: '400px' }} /> */}
       </body>
-      <footer className="footer">
-        <div>
-          <h5>Кирочная 19, г.Санкт-Петербург, офис 323</h5>
-          <h5>admin@admin</h5>
+      <br />
+      <footer className="card text-center">
+        <div className="card-header">
+          Наши контакты
+        </div>
+        <div className="card-body">
+          <h5 className="card-text">Офис: Кирочная 19, г.Санкт-Петербург, офис 323</h5>
+          <h5 className="card-text">Почта: admin@admin.com</h5>
         </div>
       </footer>
     </html>

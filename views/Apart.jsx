@@ -2,25 +2,23 @@ const React = require('react');
 
 module.exports = function Apart({ apart, admin }) {
   return (
-    <div className="card" style={{ width: '18rem' }}>
-      <div className='imageDivContainer'>
-      <img src={`${apart.image}`} alt="Photo" />
+
+
+    <div className="card mb-3" style={{maxWidth: '100%'}}>
+    <div className="row g-0">
+      <div className="col-md-4">
+        <img src={`${apart.image}`} className="img-fluid rounded-start"></img>
       </div>
-      <div className="card-body">
-        <h5 className="card-title">{apart.title}</h5>
-        <p className="card-text">{apart.description}</p>
-      </div>
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item">{apart.location}</li>
-        <li className="list-group-item">{apart.price} р/мес</li>
-        <li className="list-group-item">Принять на вход объект с полем 'Types.typesName' </li>
-        {/* <li className="list-group-item">{apart['Types.typesName']}</li> */}
-      </ul>
-      {/* <div className="card-body">
-        <a href="/user/favorite" className="card-link">Card link</a>
-        <a href="/user/favorite" className="card-link">Another link</a>
-      </div> */}
-      { (function () {
+      <div className="col-md-8">
+        <div className="card-body">
+          <h5 className="card-title" href={`/housing/${apart.id}`}>{apart.title}</h5>
+          <p className="card-text">{apart.description}</p>
+
+          <p className="card-text">Тип жилья: {apart['Type.typeName']}</p>
+
+          <p className="card-text"><small className="text-muted">{apart.location}</small></p>
+          { (function () {
+          
         if (admin) {
           return (
             <>
@@ -35,26 +33,11 @@ module.exports = function Apart({ apart, admin }) {
           </button>
         );
       }())}
+        </div>
+      </div>
     </div>
+  </div>
+
   );
 };
-// <div className="entryOnAllPage">
-//   <a href={`/housing/${apart.id}`}>{apart.title}</a>
-//   <p className="postTextClass" name="description">{apart.description}</p>
-//   <p className="postTextClass" name="location">{apart.location}</p>
-//   <img src={`${apart.image}`} alt="Photo" />
-//   <p className="postTextClass" name="type_id">{apart.type_id}</p>
-//   { (function () {
-//     if (admin) {
-//       return (
-//         <>
-//           <button href={`/housing/edit/${apart.id}`}>Редактировать</button>
-//           <button href={`/housing/del/${apart.id}`}>Удалить</button>
-//         </>
-//       );
-//     }
-//     return (
-//       <ion-icon name="heart-outline" />
-//     );
-//   }())}
-// </div>
+
