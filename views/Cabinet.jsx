@@ -9,16 +9,17 @@ module.exports = function Cabinet({ title, user, housings }) {
         <div className="titleHomeLayout">
           <h1>{title}</h1>
         </div>
-        <div className="editCardDiv" />
-        {housings.map((apart) => {
-          let admin;
-          if (user.admin) {
-            admin = true;
-          } else {
-            admin = false;
-          }
-          return (<Apart key={apart.id} apart={apart} admin={admin} />);
-        })}
+        <div className="editCardDiv">
+          {housings.map((apart) => {
+            let admin;
+            if (user.admin) {
+              admin = true;
+            } else {
+              admin = false;
+            }
+            return (<Apart key={apart.id} apart={apart} admin={admin} />);
+          })}
+        </div>
       </div>
     </Layout>
   );

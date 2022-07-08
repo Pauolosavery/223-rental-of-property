@@ -27,3 +27,21 @@ text-align: center;
 .container{
   margin-bottom: 20px;
 }
+.editCardDiv{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin: 10px;
+}
+
+.imageDivContainer{
+  height: 150px;
+  overflow:hidden;
+}
+
+img{
+  height: auto;
+  width: 100%;
+}

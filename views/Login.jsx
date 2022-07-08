@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Login({ title, errorMessage }) {
+module.exports = function Login({ user, title, errorMessage }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <div className="container">
         <h1>
           {title}
