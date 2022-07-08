@@ -23,10 +23,10 @@ module.exports = function Registr({ title }) {
             <label htmlFor="exampleInputPassword1" className="form-label">Введите пароль</label>
             <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
           </div>
-          <div className="mb-3 form-check">
+          {/* <div className="mb-3 form-check">
             <input name="checkbox" type="checkbox" className="form-check-input" id="exampleCheck1" />
             <label className="form-check-label" htmlFor="exampleCheck1">Я - админ</label>
-          </div>
+          </div> */}
           <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
         </form>
       </div>

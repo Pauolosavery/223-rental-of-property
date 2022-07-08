@@ -16,11 +16,11 @@ module.exports = function Home({ title, user, housings}) {
         {/* </div> */}
       </div>
 
-   //   <div id="map" style={{ width: '100%', height: '620px' }} />
- //     {/* <script defer src="https://api-maps.yandex.ru/2.1/?apikey=69e10893-2c84-42aa-89b4-4b684b720fad&lang=ru_RU" type="text/javascript" />
-   //   <script defer src="/maps.js" type="text/javascript" /> */}
- //     {/* <script defer src="https://api-maps.yandex.ru/2.1/?apikey=33da25b1-2302-4a3b-a310-16a6ea651c14&lang=ru_RU" type="text/javascript" />
- //     <script defer src="/js/map.js" type="text/javascript" /> */}
+   {/* //   <div id="map" style={{ width: '100%', height: '620px' }} /> */}
+    {/* <script defer src="https://api-maps.yandex.ru/2.1/?apikey=69e10893-2c84-42aa-89b4-4b684b720fad&lang=ru_RU" type="text/javascript" />
+    <script defer src="/maps.js" type="text/javascript" /> */}
+     {/* <script defer src="https://api-maps.yandex.ru/2.1/?apikey=33da25b1-2302-4a3b-a310-16a6ea651c14&lang=ru_RU" type="text/javascript" />
+     <script defer src="/js/map.js" type="text/javascript" /> */}
 
       {(function () {
         if (user) {
