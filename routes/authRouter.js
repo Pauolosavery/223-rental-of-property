@@ -4,7 +4,6 @@ const Login = require('../views/Login');
 
 const Registr = require('../views/Registr');
 
-
 const { User } = require('../db/models');
 
 authRouter
@@ -65,7 +64,8 @@ authRouter
       // res.json({ status: 'ok' });
 
     } catch (err) {
-      res.status(500).json({ errorMessage: err.message });
+      res.status(500);
+      res.renderComponent(Registr, { errorMessage: err.message })
     }
   })
   .post('/login', async (req, res) => {
@@ -77,7 +77,8 @@ authRouter
         },
       });
       if (!user) {
-        res.json({ status: 'notok', errorMessage: 'Такого пользователя не существует' });
+        res.renderComponent(Login, { errorMessage: 'Такого пользователя не существует' });
+        // res.json({ status: 'notok',  });
         return;
       }
       const authOk = bcrypt.compare(password, user.password);
@@ -90,7 +91,6 @@ authRouter
       res.redirect('/');
 
       // res.json({ status: 'ok' });
-
     } catch (err) {
       res.status(500).json({ errorMessage: err.message });
     }

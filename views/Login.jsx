@@ -1,8 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-
-module.exports = function Login({ title }) {
+module.exports = function Login({ title, errorMessage }) {
   return (
     <Layout title={title}>
       <div className="container">
@@ -21,13 +20,16 @@ module.exports = function Login({ title }) {
             <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
           </div>
           <div className="mb-3 form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">Проверка на дурака</label>
+            {/* <input type="checkbox" className="form-check-input" id="exampleCheck1" /> */}
+            <label className="form-check-label" htmlFor="exampleCheck1">
+              {/* Проверка на дурака */}
+              {errorMessage
+      && <h3 className="errorMessage">{errorMessage}</h3>}
+            </label>
           </div>
           <button type="submit" className="btn btn-primary">Войти</button>
         </form>
       </div>
-      <div className="errorMessage" />
     </Layout>
   );
 };
