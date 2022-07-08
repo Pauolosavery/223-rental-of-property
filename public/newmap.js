@@ -6,7 +6,7 @@ const placemarks = [
   {
     coordinate: [59.9766010607149,30.320776827761097],
     // Зададим содержимое заголовка балуна.
-    balloonContentHeader: '<a href = "#">"Квартира студия"</a><br>'
+    balloonContentHeader: '<a href = "#">"Квартира"</a><br>'
     + '<span class="description">Школа программирования</span>',
     // Зададим содержимое основной части балуна.
     balloonContentBody: ['<img src="https://b4.3ddd.ru/media/gallery_images/5ab62bae40b7d.jpeg" height="200" width="200"> <br/> '

@@ -1,8 +1,8 @@
 const React = require('react');
 
 module.exports = function Apart({ apart, admin }) {
-  { console.log('🚀 ~ file: Apart.jsx ~ line 4 ~ Apart ~ admin', admin); }
   return (
+
 
     <div className="card mb-3" style={{maxWidth: '100%'}}>
     <div className="row g-0">
@@ -18,6 +18,7 @@ module.exports = function Apart({ apart, admin }) {
 
           <p className="card-text"><small className="text-muted">{apart.location}</small></p>
           { (function () {
+          
         if (admin) {
           return (
             <>
@@ -27,7 +28,9 @@ module.exports = function Apart({ apart, admin }) {
           );
         }
         return (
-          <ion-icon name="heart-outline" />
+          <button href={`/housing/userk/${apart.id}`}>
+            <ion-icon style={{ width: "30px", height: "30px" }} name="heart-outline" />
+          </button>
         );
       }())}
         </div>
@@ -37,3 +40,4 @@ module.exports = function Apart({ apart, admin }) {
 
   );
 };
+

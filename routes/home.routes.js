@@ -6,7 +6,7 @@ const { Housing } = require('../db/models');
 indexRouter.get('/', async (req, res) => {
 
   const { user } = req.session;
-  console.log("🚀 ~ file: home.routes.js ~ line 8 ~ indexRouter.get ~ req.session.user", req.session.user);
+  // console.log("🚀 ~ file: home.routes.js ~ line 8 ~ indexRouter.get ~ req.session.user", req.session.user);
 
   // const user = {
   //   login: 'ADMIN',
