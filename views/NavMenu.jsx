@@ -6,7 +6,10 @@ module.exports = function NavMenu({ user }) {
       <header>
         <div className="navBar">
           <nav className="navbar navbar-expand-lg navbar-light bg-white">
-            <a className="navbar-brand" href="/">П.И.К. недвижимость</a>
+          <a className="navbar-brand" href="/">
+              <img style={{ width: '100px', heigth: 'auto' }} src="/pik.png" alt="Photo" />
+              П.И.К. недвижимость
+            </a>
             <button
               className="navbar-toggler"
               type="button"
