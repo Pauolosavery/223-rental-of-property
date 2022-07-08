@@ -37,6 +37,6 @@ module.exports = function Apart({ apart, admin }) {
         </div>
       </div>
     </div>
-
+    </div>
   );
 };
