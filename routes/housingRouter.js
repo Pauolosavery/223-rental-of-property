@@ -3,10 +3,11 @@ const AddApart = require('../views/AddApart');
 
 const { Housing } = require('../db/models');
 
-module.exports = housingRouter.get('/', (req, res) => {
-  const { user } = req.session;
-  const title = 'Добавление ренты';
-  res.renderComponent(AddApart, { title, user });
+module.exports = housingRouter
+  .get('/', (req, res) => {
+    const { user } = req.session;
+    const title = 'Добавление ренты';
+    res.renderComponent(AddApart, { title, user });
 })
   .get('/edit/:idApart', async (req, res) => {
     const { user } = req.session;
@@ -24,5 +25,5 @@ module.exports = housingRouter.get('/', (req, res) => {
       },
     });
     // res.renderComponent(AddApart, { user, editApart });
-    res.redirect('/user/admin');
+    res.json({status: 'ok'});
   });
