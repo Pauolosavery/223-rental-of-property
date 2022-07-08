@@ -20,6 +20,7 @@ module.exports = function Cabinet({ title, user, housings }) {
             return (<Apart key={apart.id} apart={apart} admin={admin} />);
           })}
         </div>
+        <script defer src="/js/client.js" />
       </div>
     </Layout>
   );
