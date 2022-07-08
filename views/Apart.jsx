@@ -2,9 +2,7 @@ const React = require('react');
 
 module.exports = function Apart({ apart, admin }) {
   return (
-
-
-    <div className="card mb-3" style={{maxWidth: '100%'}}>
+    <div className="card mb-3" style={{maxWidth: '100%'}} data-id={`${apart.id}`}>
     <div className="row g-0">
       <div className="col-md-4">
         <img src={`${apart.image}`} className="img-fluid rounded-start"></img>
@@ -22,8 +20,8 @@ module.exports = function Apart({ apart, admin }) {
         if (admin) {
           return (
             <>
-              <button href={`/housing/edit/${apart.id}`}>Редактировать</button>
-              <button href={`/housing/del/${apart.id}`}>Удалить</button>
+              <button className="editButton" href={`/housing/edit/${apart.id}`}>Редактировать</button>
+              <button className="delButton" href={`/housing/del/${apart.id}`}>Удалить</button>
             </>
           );
         }
