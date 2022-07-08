@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 module.exports = function AddApart({ title, user }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <div className="container">
         <h1>
           {title}
