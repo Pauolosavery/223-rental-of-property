@@ -44,7 +44,9 @@ module.exports = function Layout({ title, children, user }) {
         {/* <!-- User Scripts --> */}
         <title>{title}</title>
       </head>
+
       <NavMenu user={user} />
+
       <body>
         {children}
         {/* <div id="map" style={{ width: '100%', height: '400px' }} /> */}
