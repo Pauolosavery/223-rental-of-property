@@ -1,0 +1,47 @@
+.navBar {
+  display: flex;
+  justify-content:space-evenly;
+  margin: 2%;
+}
+
+.divHomeImg {
+  margin-top: 2%;
+  width: 100%;
+  height: 500px;
+  border: 2px solid #ccc;
+  background-image: url(https://picsum.photos/1080/200);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleHomeLayout{
+  display:flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.footer {
+text-align: center;
+}
+
+.container{
+  margin-bottom: 20px;
+}
+.editCardDiv{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin: 10px;
+}
+
+.imageDivContainer{
+  height: 150px;
+  overflow:hidden;
+}
+
+img{
+  height: auto;
+  width: 100%;
+}
