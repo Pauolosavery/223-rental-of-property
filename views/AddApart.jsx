@@ -8,7 +8,7 @@ module.exports = function AddApart({ title, user }) {
         <h1>
           {title}
         </h1>
-        <form action="/auth/login" method="post">
+        <form action="/bd" method="post">
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Заголовок</label>
             <input name="title" type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -27,7 +27,7 @@ module.exports = function AddApart({ title, user }) {
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Фотография</label>
-            <input name="location" type="text" className="form-control" id="exampleInputPassword1" value={"https://picsum.photos/200/300"}/>
+            <input name="image" type="text" className="form-control" id="exampleInputPassword1" value={"https://picsum.photos/200/300"}/>
           </div>
           <div className="form-group mt-3">
           <label htmlFor="exampleInputPassword1" className="form-label">Выберите тип недвижимости</label>
