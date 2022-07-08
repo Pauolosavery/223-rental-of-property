@@ -5,10 +5,10 @@ const Layout = require('./Layout');
 module.exports = function Cabinet({ title, user, housings }) {
   return (
     <Layout title={title} user={user}>
+      <div className="titleHomeLayout">
+        <h1>{title}</h1>
+      </div>
       <div className="homePage">
-        <div className="titleHomeLayout">
-          <h1>{title}</h1>
-        </div>
         <div className="editCardDiv">
           {housings.map((apart) => {
             let admin;

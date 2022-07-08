@@ -35,13 +35,173 @@ text-align: center;
 .card{
   margin: 10px;
 }
-
-.imageDivContainer{
-  height: 150px;
-  overflow:hidden;
+.homePage{
+  display: flex;
+}
+/* Frame 1 */
+.divFrameCard{
+position: relative;
+width: 537px;
+height: 280px;
+background: #FFFFFF;
 }
 
-img{
-  height: auto;
-  width: 100%;
+/* Rectangle 1 */
+.divFrameCardBG{
+position: absolute;
+width: 515px;
+height: 250px;
+left: 12px;
+top: 15px;
+
+background: rgba(217, 217, 217, 0.32);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
 }
+
+/* Rectangle 2 */
+.divFrameCardIMG{
+position: absolute;
+width: 203px;
+height: 250px;
+left: 12px;
+top: 15px;
+
+
+/* Rectangle 2 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+filter: drop-shadow(5px 0px 2px #ccc);
+border-radius: 30px;
+}
+
+
+/* Title apart */
+.divFrameCardTitle{
+position: absolute;
+width: 236px;
+height: 52px;
+left: 252px;
+top: 42px;
+
+/* font-family: 'Regular'; */
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
+}
+
+
+/* Group 1 */
+.cardDiscriptionDiv{
+position: absolute;
+width: 268px;
+height: 101px;
+left: 237px;
+top: 94px;
+
+
+/* apart discription and hide text ... */
+
+position: absolute;
+width: 268px;
+height: 101px;
+left: 237px;
+top: 94px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+}
+
+
+
+/* 10 000 р/мес */
+.cardFramePrice{
+position: absolute;
+width: 172px;
+height: 45px;
+left: 339px;
+top: 200px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+
+
+/* Ellipse 1 */
+.cardDivCloseIcon{
+position: absolute;
+width: 43px;
+height: 43px;
+left: 462px;
+top: 10px;
+border-radius: 50%;
+background: #E6653C;
+}
+
+/* x */
+.cardDivCloseIconX{
+position: absolute;
+width: 13px;
+height: 29px;
+left: 492px;
+top: 28px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+color: #E0E0E0;
+}
+
+
+/* Rectangle 3 */
+.cardDivEdit{
+position: absolute;
+width: 87px;
+height: 45px;
+left: 232px;
+top: 190px;
+filter: drop-shadow(1px 1px 3px #c3ad96);
+background: #EBB16D;
+border-radius: 6px;
+cursor: pointer;
+text-align: center;
+vertical-align: middle;
+font-size: 12px;
+color: #f9f6f6;
+/* font-style: normal; */
+font-weight: 400;
+padding-top: 2.5%;
+}
+
+.deleteIconApart{
+  -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+.deleteIconApart:hover{ /* Добавляем псевдокласс :hover */
+    /* Задаём расстояние, на которое сместится кнопка */
+    -webkit-transform: translate(10px);
+    transform: translate(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    }
