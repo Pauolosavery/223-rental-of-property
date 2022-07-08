@@ -31,7 +31,7 @@ module.exports = function NavMenu({ user }) {
                         <a className="nav-link mr-4" href="/user/admin">Личный кабинет</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href={`/user/${user.id}/goods/edit`}>Добавить товар</a>
+                        <a className="nav-link mr-4" href="/housing">Добавить товар</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/auth/logout">Выйти</a>

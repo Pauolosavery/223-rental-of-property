@@ -16,6 +16,8 @@ module.exports = function Layout({ title, children, user }) {
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <script defer src="/js/client.js" />
+        <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" />
+        <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" />
         {/* <!-- Bootstrap CSS --> */}
         <link
           rel="stylesheet"
