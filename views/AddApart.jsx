@@ -1,7 +1,8 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function AddApart({ title, user }) {
+module.exports = function AddApart({ title, user, editApart }) {
+  {console.log("🚀 ~ file: AddApart.jsx ~ line 5 ~ AddApart ~ editApart", editApart)}
   return (
     <Layout title={title} user={user}>
       <div className="container">
@@ -11,7 +12,7 @@ module.exports = function AddApart({ title, user }) {
         <form action="/bd" method="post">
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Заголовок</label>
-            <input name="title" type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <input name="title" type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" defaultValue={editApart.title}/>
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Стоимость аренды (р/мес)</label>

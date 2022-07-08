@@ -23,6 +23,7 @@ const bdRouter = require('./routes/bd');
 
 const housingRouter = require('./routes/housingRouter');
 const authRouter = require('./routes/authRouter');
+const bdRouter = require('./routes/bd');
 
 const PORT = process.env.PORT ?? 3000;
 
@@ -40,9 +41,11 @@ app.use('/housing', housingRouter);
 // app.use('/houses', houseRouter);
 
 
+
 app.use('/room', roomRouter);
 app.use('/flat', flatRouter);
 app.use('/house', houseRouter);
+
 app.use('/bd', bdRouter);
 
 app.use('/auth', authRouter);

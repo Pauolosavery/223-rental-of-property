@@ -25,11 +25,12 @@ userRouter.get('/', (req, res) => {
   })
   .get('/admin', async (req, res) => {
     const title = 'Администратор';
-    // const user = await User.findAll({ include: { all: true }, raw: true });
-    const housings = await Housing.findAll({ include: { all: true }, raw: true });
-  
+
+
     const {user} = req.session;
-    res.renderComponent(Cabinet, { title, user, housings });
+    const housings = await Housing.findAll({ include: { all: true }, raw: true });
+    res.renderComponent(Cabinet, { title, housings, user });
+
   });
 
 module.exports = userRouter;
