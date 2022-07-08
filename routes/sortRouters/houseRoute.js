@@ -1,13 +1,15 @@
 const houseRouter = require('express').Router();
-// const bcrypt = require('bcrypt');
-// const Login = require('../views/Login');
+const House = require('../../views/sortViews/House');
 
 const { Housing } = require('../../db/models');
 
 houseRouter
   .get('/', async (req, res) => {
-    const housings = await Housing.findAll({ where: { type_id: 3 }, raw: true });
-    
+    const title = 'Дома';
+
+    const housings = await Housing.findAll({ include: { all: true }, where: { type_id: 3 }, raw: true });
+
+    res.renderComponent(House, { title, housings });
     console.log(housings);
   })
 
