@@ -10,7 +10,8 @@ roomRouter
 
     const housings = await Housing.findAll({ include: { all: true }, where: { type_id: 1 }, raw: true });
 
-    res.renderComponent(Room, { title, housings, user });
+    res.renderComponent(Room, { title, user, housings });
+
     console.log(housings);
   });
 

@@ -2,6 +2,7 @@ const React = require('react');
 
 module.exports = function Apart({ apart, admin }) {
   return (
+
     <div className="card mb-3" style={{maxWidth: '100%'}} data-id={`${apart.id}`}>
     <div className="row g-0">
       <div className="col-md-4">
@@ -21,6 +22,7 @@ module.exports = function Apart({ apart, admin }) {
           return (
             <>
               <button className="editButton" href={`/housing/edit/${apart.id}`}>Редактировать</button>
+               <a />
               <button className="delButton" href={`/housing/del/${apart.id}`}>Удалить</button>
             </>
           );
@@ -31,11 +33,10 @@ module.exports = function Apart({ apart, admin }) {
           </button>
         );
       }())}
+
         </div>
       </div>
     </div>
-  </div>
 
   );
 };
-

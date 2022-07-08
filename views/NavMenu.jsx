@@ -6,7 +6,10 @@ module.exports = function NavMenu({ user }) {
       <header>
         <div className="navBar">
           <nav className="navbar navbar-expand-lg navbar-light bg-white">
-            <a className="navbar-brand" href="/">П.И.К. недвижимость</a>
+          <a className="navbar-brand" href="/">
+              <img style={{ width: '100px', heigth: 'auto' }} src="/pik.png" alt="Photo" />
+              П.И.К. недвижимость
+            </a>
             <button
               className="navbar-toggler"
               type="button"
@@ -48,13 +51,13 @@ module.exports = function NavMenu({ user }) {
                         <a className="nav-link mr-4">{`Привет, ${user.login}!`}</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/rooms">Комнаты</a>
+                        <a className="nav-link mr-4" href="/room">Комнаты</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/flats">Квартиры</a>
+                        <a className="nav-link mr-4" href="/flat">Квартиры</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link mr-4" href="/houses">Дома</a>
+                        <a className="nav-link mr-4" href="/house">Дома</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link mr-4" href="/user/favorite">Избранное</a>

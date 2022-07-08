@@ -8,10 +8,11 @@ houseRouter
     const title = 'Дома';
     const {user} = req.session;
 
-    const housings = await Housing.findAll({ include: { all: true }, where: { type_id: 3 }, raw: true });
+    const housings = await Housing.findAll({ include: { all: true },  where: {type_id: 3}, raw: true });
 
-    res.renderComponent(House, { title, housings, user });
+    res.renderComponent(House, { title, user, housings });
     console.log(housings);
   })
 
-  module.exports = houseRouter;
+module.exports = houseRouter;
+
