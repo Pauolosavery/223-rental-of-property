@@ -19,7 +19,7 @@ const roomRouter = require('./routes/sortRouters/roomRouter');
 const flatRouter = require('./routes/sortRouters/flatRoute');
 const houseRouter = require('./routes/sortRouters/houseRoute');
 
-const bdRouter = require('./routes/bd');
+// const bdRouter = require('./routes/bd');
 
 const housingRouter = require('./routes/housingRouter');
 const authRouter = require('./routes/authRouter');
