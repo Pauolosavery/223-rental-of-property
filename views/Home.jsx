@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Home({ title, user }) {
   return (
     <Layout title={title} user={user}>
-      <div className="homePage">
+      <div style={{ textAlign: 'center' }} className="homePage">
         <h1>{title}</h1>
         {/* <div className="divHomeImg"> */}
         {/* <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acabc5f2f39c3cb2a515d5b03f7436918af66ff073e16f4788011b30149fec17a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=true" /> */}
