@@ -26,11 +26,11 @@ async function init() {
   bd.forEach((house) => {
     geocoder[i] = [];
     geocoder[i].push(ymaps.geocode(house.location));
-    geocoder[i].push(house.title);
-    geocoder[i].push(house.price);
-    geocoder[i].push(house.description);
-    geocoder[i].push(house.location);
-    geocoder[i].push(house.image);
+    geocoder[i].push(house.title);// 1
+    geocoder[i].push(house.price);// 2
+    geocoder[i].push(house.description);// 3
+    geocoder[i].push(house.location);// 4
+    geocoder[i].push(house.image);// 5
     geocoder[i].push(house.type_id);
     i++;
   });
@@ -45,8 +45,12 @@ async function init() {
 
         // Добавление метки (Placemark) на карту
         const placemark = new ymaps.Placemark(coordinates, {
-          hintContent: `${geo[1]}`,
-          balloonContent: `${geo[4]}`// ${geo[2]}`,
+          balloonContentHeader: `<a href = "#">${geo[1]} </a><br>`
+          + `<span >${geo[4]}</span><br>`
+          + `<img src="${geo[5]}" style="width:200px; height:200px "> <br/>`,
+          balloonContentBody: `<a href="#">${geo[2]} руб.</a> <br/>` + `<b>${geo[3]}</b> <br/>`,
+          balloonContentFooter: 'Информация предоставлена:<br/>OOO "П.И.К."',
+          hintContent: `${geo[1]}<br/> ${geo[2]} рубляу`,
         }, {
           preset: 'islands#redHomeIcon',
           iconColor: '#8b00ff',

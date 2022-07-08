@@ -5,10 +5,11 @@ module.exports = function Home({ title, user }) {
   return (
     <Layout title={title} user={user}>
       <script
+        defer
         src="https://api-maps.yandex.ru/2.1/?apikey=33da25b1-2302-4a3b-a310-16a6ea651c14&lang=ru_RU"
         type="text/javascript"
       />
-      <script src="/map.js" type="text/javascript" />
+      <script defer src="/map.js" type="text/javascript" />
       <div style={{ textAlign: 'center' }} className="homePage">
         <h1>{title}</h1>
         {/* <div className="divHomeImg"> */}
