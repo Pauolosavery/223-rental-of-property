@@ -27,7 +27,7 @@ module.exports = function Home({ title, user, housings}) {
         if (user) {
           return (<div id="map" style={{ width: '100%', height: '620px' }} />);
         }
-        return (<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acabc5f2f39c3cb2a515d5b03f7436918af66ff073e16f4788011b30149fec17a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=true" />);
+        return (<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acabc5f2f39c3cb2a515d5b03f7436918af66ff073e16f4788011b30149fec17a&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=true"></script>);
       }())}
 
 
